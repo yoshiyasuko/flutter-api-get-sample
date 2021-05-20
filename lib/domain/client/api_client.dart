@@ -6,10 +6,10 @@ import 'package:flutter_api_get_sample/domain/response/response.dart';
 import 'package:http/http.dart' as http;
 
 class ApiClient {
-  static final endpoint = "https://mhf.ss-n.app";
+  static final endpoint = 'mhf.ss-n.app';
 
   static Future<Response<List<EventInformation>>> fetchEvents() async {
-    final response = await http.get(Uri.https(endpoint, "/shikure_table.json"));
+    final response = await http.get(Uri.https(endpoint, '/shikure_table.json'));
     List<dynamic> bodyJsonArray = json.decode(response.body);
 
     if (response.statusCode == 200) {
