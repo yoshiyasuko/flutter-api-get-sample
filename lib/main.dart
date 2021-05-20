@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_api_get_sample/view/event_information_list_view.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,6 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: EventInformationListView(),
+      builder: EasyLoading.init(),
     );
   }
 }
